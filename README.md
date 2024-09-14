@@ -18,25 +18,24 @@ Useful if you keep connecting to remote machines and you're tired of bringing up
 - Install Python3 if it isn't installed on your system already.
 
 - Install the script in the Rofi configuration directory:
-
-    `mkdir -p mkdir -p ~/.config/rofi/`  
-    `cp remmina_profiles.py ~/.config/rofi/`  
-    `chmod +x ~/.config/rofi/remmina_profiles.py`  
+  <pre>
+  mkdir -p mkdir -p ~/.config/rofi/
+  cp remmina_profiles.py ~/.config/rofi/
+  chmod +x ~/.config/rofi/remmina_profiles.py</pre>
 
 - If Remmina isn't installed at `/usr/bin/remmina` on your system, or if your main Remmina configuration file isn't at `~/.config/remmina/remmina.pref`, edit the preferences in `~/.config/rofi/remmina_profiles.py`
 
 - If you use a Rofi configuration file (i.e. `~/.config/rofi/config.rasi`), add the custom Remmina mode to the `modi` line:
-
-    `configuration {`  
-    `    `*`[...]`*  
-    `    modi: "drun,run,window,ssh,`**`remmina:~/.config/rofi/remmina_profiles.py`**`";`  
-    `    `*`[...]`*  
-    `}`  
+  <pre>
+  configuration {
+      <i>[...]</i>
+      modi: "drun,run,window,ssh,<b>remmina:~/.config/rofi/remmina_profiles.py"</b>;
+      <i></n>[...]</i>
+  }</pre>
 
 - If you don't use a Rofi configuration file, pass the new modi as a command line parameters - for example in your i3 configuration file:
-
-    `bindcode $mod+40 exec "rofi -modi drun,run,window,ssh,`**`remmina:~/.config/rofi/remmina_profiles.py`**` -show drun"`  
-
+  <pre>
+  bindcode $mod+40 exec "rofi -modi drun,run,window,ssh,<b>remmina:~/.config/rofi/remmina_profiles.py</b> -show drun"</pre>
 
 
 ## Usage
