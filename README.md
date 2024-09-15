@@ -19,7 +19,7 @@ Useful if you keep connecting to remote machines and you're tired of bringing up
 
 - Install the script in the Rofi configuration directory:
   <pre>
-  mkdir -p mkdir -p ~/.config/rofi/
+  mkdir -p ~/.config/rofi/
   cp remmina_profiles.py ~/.config/rofi/
   chmod +x ~/.config/rofi/remmina_profiles.py</pre>
 
