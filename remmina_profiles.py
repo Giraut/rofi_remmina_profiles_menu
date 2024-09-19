@@ -47,7 +47,7 @@ def main():
 
   # Otherwise send the list of profile names to rofi
   else:
-    for p in profiles:
+    for p in sorted(profiles):
       print(p)
 
   return 0
